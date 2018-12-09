@@ -3,7 +3,9 @@
 #####
 
 sudo apt-get update && sudo apt-get upgrade -y
-sudo apt-get install git compizconfig-settings-manager unity-tweak-tool
+sudo apt-get install git compizconfig-settings-manager 
+sudo apt-get install unity-tweak-tool 
+sudo apt-get install gdebi
 
 
 #--------Install NeoVim--------
