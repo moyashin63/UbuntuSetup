@@ -3,9 +3,7 @@
 #####
 
 sudo apt-get update && sudo apt-get upgrade -y
-sudo apt-get install git compizconfig-settings-manager 
-sudo apt-get install unity-tweak-tool 
-sudo apt-get install gdebi
+sudo apt-get install compizconfig-settings-manager unity-tweak-tool gdebi
 
 
 #--------Install NeoVim--------
@@ -17,6 +15,19 @@ sudo apt-get install neovim
 sudo apt-get install python3-dev python3-pip
 pip3 install -U pip3
 echo "--------Installed NeoVim--------"
+
+
+#--------Install Powerline Shell--------
+git clone https://github.com/powerline/fonts.git --depth=1
+cd fonts
+./install.sh
+cd ..
+rm -r fonts
+sudo apt install -y python-pip
+pip install --upgrade pip
+pip install --user powerline-shell
+
+echo "--------Installed Powerline Shell--------"
 
 
 #--------Install Nvidia driver--------
@@ -35,9 +46,9 @@ echo "--------Installed Google Chrome--------"
 
 
 #--------Install Google Drive--------
-sudo add-apt-repository ppa:alessandro-strada/ppa
-sudo apt-get update
-mkdir ~/GoogleDrive
+#sudo add-apt-repository ppa:alessandro-strada/ppa
+#sudo apt-get update
+#mkdir ~/GoogleDrive
 #Login
 #sudo apt-get install google-drive-ocamlfuse
 #google-drive-ocamlfuse ~/GoogleDrive
@@ -45,6 +56,6 @@ mkdir ~/GoogleDrive
 
 #--------LIGGGHTS--------
 sudo apt-get install openmpi-bin libopenmpi-dev libvtk6.2 libvtk6-dev paraview
+cd ~
 git clone https://github.com/ysbd1205/MyLIGGGHTS.git
 echo "--------Installed MyLIGGGHTS--------"
-
