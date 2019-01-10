@@ -14,20 +14,11 @@ sudo apt-get install neovim
 #Install dependencies for NeoVim's python3 module
 sudo apt-get install python3-dev python3-pip
 pip3 install -U pip3
+echo "alias vi='nvim'" >> ~/.bashrc
+echo "alias vim='nvim'" >> ~/.bashrc
+cd ~/.config/
+git clone https://github.com/ysbd1205/nvim.git
 echo "--------Installed NeoVim--------"
-
-
-#--------Install Powerline Shell--------
-git clone https://github.com/powerline/fonts.git --depth=1
-cd fonts
-./install.sh
-cd ..
-sudo rm -r fonts
-sudo apt install -y python-pip
-pip install --upgrade pip
-pip install --user powerline-shell
-
-echo "--------Installed Powerline Shell--------"
 
 
 #--------Install Nvidia driver--------
@@ -36,13 +27,6 @@ echo "--------Installed Powerline Shell--------"
 #sudo apt search nvidia
 #sudo apt-get install nvidia-NNN
 #echo "--------Installed NVidia driver NNN--------"
-
-
-#--------Install Google Chrome--------
-sudo sh -c 'echo "deb http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list'
-sudo wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
-sudo apt-get update && sudo apt-get install google-chrome-stable
-echo "--------Installed Google Chrome--------"
 
 
 #--------Install Google Drive--------
