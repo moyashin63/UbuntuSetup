@@ -11,4 +11,12 @@ sudo apt install -y python-pip
 pip install --upgrade pip
 pip install --user powerline-shell
 
+#function _update_ps1() {
+#    PS1="$(~/.local/bin/powerline-shell $?)"
+#}
+#
+#if [ "TERM" != "linux" ]; then
+#    PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
+#fi
+
 echo "--------Installed Powerline Shell--------"

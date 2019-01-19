@@ -5,8 +5,8 @@
 sudo apt-get update && sudo apt-get upgrade -y
 sudo apt-get install compizconfig-settings-manager unity-tweak-tool gdebi
 
-echo "alias gaddcommit='git add . && git commit -m "no updates"'" >> ~/.bashrc
-echo "alias gaddcommitpush='git add . && git commit -m "no updates" && git push origin master'" >> ~/.bashrc
+#echo "alias gaddcommit='git add . && git commit -m "no updates"'" >> ~/.bashrc
+#echo "alias gaddcommitpush='git add . && git commit -m "no updates" && git push origin master'" >> ~/.bashrc
 
 
 #--------Install NeoVim--------
