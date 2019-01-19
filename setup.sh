@@ -5,6 +5,9 @@
 sudo apt-get update && sudo apt-get upgrade -y
 sudo apt-get install compizconfig-settings-manager unity-tweak-tool gdebi
 
+echo "alias gaddcommit='git add . && git commit -m "no updates"'" >> ~/.bashrc
+echo "alias gaddcommitpush='git add . && git commit -m "no updates" && git push origin master'" >> ~/.bashrc
+
 
 #--------Install NeoVim--------
 sudo apt-get install software-properties-common
@@ -39,7 +42,7 @@ echo "--------Installed NeoVim--------"
 
 
 #--------LIGGGHTS--------
-sudo apt-get install openmpi-bin libopenmpi-dev libvtk6.2 libvtk6-dev paraview
-cd ~
-git clone https://github.com/ysbd1205/MyLIGGGHTS.git
-echo "--------Installed MyLIGGGHTS--------"
+#sudo apt-get install openmpi-bin libopenmpi-dev libvtk6.2 libvtk6-dev paraview
+#cd ~
+#git clone https://github.com/ysbd1205/MyLIGGGHTS.git
+#echo "--------Installed MyLIGGGHTS--------"
