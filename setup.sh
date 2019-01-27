@@ -62,11 +62,3 @@ git clone https://github.com/ysbd1205/excavation.git
 
 cd ~/UbuntuSetup
 
-
-# chrome
-echo $PASSWORD | sudo -S echo "deb http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list
-echo $PASSWORD | sudo -S wget -q -O - https://dl-ssl.google.com/linux/linux_singing_key.pub | sudo apt-key add -
-echo $PASSWORD | sudo -S apt-get update && sudo apt-get install google-chrome-stable
-echo $PASSWORD | sudo -S sed -e '1d' /etc/apt/sources.list.d/google.list
-echo $PASSWORD | sudo -S apt-get update
-echo $PASSWORD | echo "--------Installed Google Chrome--------"
