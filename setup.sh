@@ -41,6 +41,23 @@ echo "source ~/UbuntuSetup/mybashrc" >> ~/.bashrc
 #google-drive-ocamlfuse ~/GoogleDrive
 
 
+
+#--------Install Powerline Shell--------
+git clone https://github.com/powerline/fonts.git --depth=1 && cd fonts
+./install.sh
+cd ..
+echo $PASSWORD | sudo -S rm -r fonts
+
+gsettings set org.gnome.desktop.interface monospace-font-name 'Uvuntu Mono derivative Powerline 13'
+
+echo $PASSWORD | sudo -S apt-get install -y python-pip
+pip install --user powerline-shell
+
+gsettings set org.gnome.desktop.interface monospace-font-name 'Uvuntu Mono derivative Powerline 13'
+echo "--------Installed Powerline Shell--------"
+
+
+
 #--------LIGGGHTS--------
 echo $PASSWORD | sudo -S apt-get install openmpi-bin libopenmpi-dev libvtk6.2 libvtk6-dev paraview
 cd ~
