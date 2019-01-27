@@ -2,11 +2,25 @@
 #####
 #####
 
+touch ~/.netrc
+printf "PASSWORD:"
+read PASSWORD
+echo "$PASSWORD"
+
+echo "machine github.com" >> ~/.netrc
+echo "login ysbd1205" >> ~/.netrc
+echo "password ${PASSWORD}" >> ~/.netrc
+
+
 sudo apt-get update && sudo apt-get upgrade -y
 sudo apt-get install compizconfig-settings-manager unity-tweak-tool gdebi
 
-#echo "alias gaddcommit='git add . && git commit -m "no updates"'" >> ~/.bashrc
-#echo "alias gaddcommitpush='git add . && git commit -m "no updates" && git push origin master'" >> ~/.bashrc
+git config --global user.email "ys.bd.1205@gmail.com"
+git config --global user.name "ysbd1205"
+
+echo "alias gaddcommit='git add . && git commit -m "no updates"'" >> ~/.bashrc
+echo "alias gaddcommitpush='git add . && git commit -m "no updates" && git push origin master'" >> ~/.bashrc
+
 
 
 #--------Install NeoVim--------
@@ -42,7 +56,7 @@ echo "--------Installed NeoVim--------"
 
 
 #--------LIGGGHTS--------
-#sudo apt-get install openmpi-bin libopenmpi-dev libvtk6.2 libvtk6-dev paraview
-#cd ~
-#git clone https://github.com/ysbd1205/MyLIGGGHTS.git
-#echo "--------Installed MyLIGGGHTS--------"
+sudo apt-get install openmpi-bin libopenmpi-dev libvtk6.2 libvtk6-dev paraview
+cd ~
+git clone https://github.com/ysbd1205/MyLIGGGHTS.git
+echo "--------Installed MyLIGGGHTS--------"
