@@ -1,0 +1,12 @@
+alias vi='nvim'
+alias vim='nvim'
+alias gaddcommit='git add . && git commit -m "no updates"'
+alias gaddcommitpush='git add . && git commit -m "no updates" && git push origin master'
+
+function _update_ps1() {
+    PS1="$(~/.local/bin/powerline-shell $?)"
+}
+
+if [ "TERM" != "linux" ]; then
+    PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
+fi

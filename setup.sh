@@ -2,40 +2,25 @@
 #####
 #####
 
-touch ~/.netrc
-printf "PASSWORD:"
-read PASSWORD
-echo "$PASSWORD"
-
-echo "machine github.com" >> ~/.netrc
-echo "login ysbd1205" >> ~/.netrc
-echo "password ${PASSWORD}" >> ~/.netrc
-
-
-sudo apt-get update && sudo apt-get upgrade -y
-sudo apt-get install compizconfig-settings-manager unity-tweak-tool gdebi
+echo $PASSWORD | sudo -S apt-get install compizconfig-settings-manager unity-tweak-tool gdebi
 
 git config --global user.email "ys.bd.1205@gmail.com"
 git config --global user.name "ysbd1205"
 
-echo "alias gaddcommit='git add . && git commit -m "no updates"'" >> ~/.bashrc
-echo "alias gaddcommitpush='git add . && git commit -m "no updates" && git push origin master'" >> ~/.bashrc
-
-
 
 #--------Install NeoVim--------
-sudo apt-get install software-properties-common
-sudo add-apt-repository ppa:neovim-ppa/unstable
-sudo apt-get update
-sudo apt-get install neovim xsel
+echo $PASSWORD | sudo -S apt-get install software-properties-common
+echo $PASSWORD | sudo -S add-apt-repository ppa:neovim-ppa/unstable
+echo $PASSWORD | sudo -S apt-get update
+echo $PASSWORD | sudo -S apt-get install neovim xsel
 #Install dependencies for NeoVim's python3 module
-sudo apt-get install python3-dev python3-pip
-pip3 install -U pip3
-echo "alias vi='nvim'" >> ~/.bashrc
-echo "alias vim='nvim'" >> ~/.bashrc
+echo $PASSWORD | sudo -S apt-get install python3-dev python3-pip
 cd ~/.config/
 git clone https://github.com/ysbd1205/nvim.git
 echo "--------Installed NeoVim--------"
+
+source ~/UbuntuSetup/powerlineshell.sh
+echo "source ~/UbuntuSetup/mybashrc" >> ~/.bashrc
 
 
 #--------Install Nvidia driver--------
@@ -56,7 +41,9 @@ echo "--------Installed NeoVim--------"
 
 
 #--------LIGGGHTS--------
-sudo apt-get install openmpi-bin libopenmpi-dev libvtk6.2 libvtk6-dev paraview
+echo $PASSWORD | sudo -S apt-get install openmpi-bin libopenmpi-dev libvtk6.2 libvtk6-dev paraview
 cd ~
 git clone https://github.com/ysbd1205/MyLIGGGHTS.git
 echo "--------Installed MyLIGGGHTS--------"
+
+source ~/UbuntuSetup/googlechrome.sh
