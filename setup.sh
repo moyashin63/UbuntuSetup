@@ -44,8 +44,7 @@ echo "source ~/UbuntuSetup/mybashrc" >> ~/.bashrc
 #--------LIGGGHTS--------
 echo $PASSWORD | sudo -S apt-get install openmpi-bin libopenmpi-dev libvtk6.2 libvtk6-dev paraview
 cd ~
-git clone https://github.com/ysbd1205/MyLIGGGHTS.git
-echo "--------Installed MyLIGGGHTS--------"
+git clone https://github.com/ysbd1205/excavation.git
 
 cd ~/UbuntuSetup
 . googlechrome.sh
