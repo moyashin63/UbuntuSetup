@@ -19,7 +19,8 @@ cd ~/.config/
 git clone https://github.com/ysbd1205/nvim.git
 echo "--------Installed NeoVim--------"
 
-source ~/UbuntuSetup/powerlineshell.sh
+cd ~/UbuntuSetup
+. powerlineshell.sh
 echo "source ~/UbuntuSetup/mybashrc" >> ~/.bashrc
 
 
@@ -46,4 +47,5 @@ cd ~
 git clone https://github.com/ysbd1205/MyLIGGGHTS.git
 echo "--------Installed MyLIGGGHTS--------"
 
-source ~/UbuntuSetup/googlechrome.sh
+cd ~/UbuntuSetup
+. googlechrome.sh
